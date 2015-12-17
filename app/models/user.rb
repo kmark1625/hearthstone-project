@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  validates :email, { :uniqueness => true }
+
   def password
     @password ||= BCrypt::Password.new(password_hash)
   end
