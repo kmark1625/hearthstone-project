@@ -18,6 +18,10 @@ gem 'bcrypt'
 
 gem 'faker'
 
+gem 'unirest'
+
+gem 'json'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

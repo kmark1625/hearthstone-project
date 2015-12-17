@@ -22,6 +22,10 @@ require 'erb'
 
 require 'faker'
 
+require 'json'
+
+require 'unirest'
+
 require 'bcrypt'
 
 # Some helper constants for path-centric logic

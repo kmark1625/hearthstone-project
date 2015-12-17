@@ -1,0 +1,6 @@
+<ul class="gallery">
+  <% card_grouping = @cards[300..320] %>
+  <% card_grouping.each do |card| %>
+    <li><img src="<%= card.img %>"></li>
+  <% end %>
+</ul>

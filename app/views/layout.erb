@@ -37,8 +37,17 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="/users/new">Register</a></li>
-        <li><a href="/login">Login</a></li>
+        <% if current_user %>
+          <li><a href="/"><%= current_user.first_name %></a></li>
+          <li><a href="/cards">Card Gallery</a></li>
+          <li><a href="/decks/new">Deck Builder</li>
+          <li><a href="#">Meta Tracker</a></li>
+          <li><a href="/logout">Logout</a></li>
+          <img src="<%= current_user.avatar %>">
+        <% else %>
+          <li><a href="/users/new">Register</a></li>
+          <li><a href="/sessions/new">Login</a></li>
+        <% end %>
       </ul>
     </div>
   </nav>

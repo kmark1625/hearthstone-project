@@ -1,0 +1,7 @@
+.gallery {
+  list-style: none;
+  background-color: AliceBlue;
+  margin: 20px;
+}
+.gallery li {list-style: none; display: inline;}
+.gallery img { vertical-align: middle}
