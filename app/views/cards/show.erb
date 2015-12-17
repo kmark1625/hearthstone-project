@@ -1,6 +1,29 @@
+<ul class="nav nav-pills">
+  <li class="active"><a href="/cards">All Cards</a></li>
+  <li><a href="/cards/Basic">Basic</a></li>
+  <li><a href="/cards/Classic">Clasic</a></li>
+  <li><a href="/cards/Naxxramas">Naxxramas</a></li>
+  <li><a href="/cards/Goblins vs Gnomes">Goblins vs Gnomes</a></li>
+  <li><a href="/cards/Blackrock Mountain">Blackrock Mountain</a></li>
+  <li><a href="/cards/The League of Explorers">The Lague of Explorers</a></li>
+</ul>
 <ul class="gallery">
-  <% card_grouping = @cards[300..320] %>
+  <ul class="page-selector">
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+  </ul>
+  <% card_grouping = @cards[0..20] %>
   <% card_grouping.each do |card| %>
-    <li><img src="<%= card.img %>"></li>
+    <li><img class="card-display" src="<%= card.img %>"></li>
   <% end %>
+  <ul class="page-selector">
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+  </ul>
 </ul>

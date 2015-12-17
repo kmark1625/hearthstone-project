@@ -11,7 +11,7 @@ CARD_SETS.each do |card_set|
   data.each do |card_data|
     card = Card.new
     card.attributes = card_data.reject{ |k,v| !card.attributes.keys.member?(k.to_s) }
-    if card.type != "Hero" && card.type != "Enchantment" && card.type != "Hero Power" && !card.cardId.include?("NAX") && !card.cardId.include?("t")
+    if card.type != "Hero" && card.type != "Enchantment" && card.type != "Hero Power" && !card.cardId.include?("NAX") && !card.cardId.include?("t") && !card.cardId.include?("BRMA") && !card.cardId.include?("LOEA")
       card.save
     end
   end

@@ -1,3 +1,8 @@
+footer {
+  background-color: gray;
+  padding: 20px;
+}
+
 .gallery {
   list-style: none;
   background-color: AliceBlue;
@@ -5,3 +10,12 @@
 }
 .gallery li {list-style: none; display: inline;}
 .gallery img { vertical-align: middle}
+
+.nav-pills {
+  padding-left: 20px;
+}
+
+.card-display {
+  width: 200px;
+  height: 300px;
+}
