@@ -32,3 +32,5 @@ handlock.cards << (Card.find_by(name: "Lord Jaraxxus"))
 dragon_priest = Deck.create(name: "Dragon Priest", user_id: 1)
 dragon_priest.cards << (Card.find_by(name: "Ysera"))
 
+scrape_top_decks()
+
