@@ -19,3 +19,9 @@ footer {
   width: 200px;
   height: 300px;
 }
+
+.card-viewer {
+  margin: 50px;
+  padding: 50px;
+  background-color: AliceBlue;
+}

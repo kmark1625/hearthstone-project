@@ -8,7 +8,7 @@ post "/sessions" do
     redirect "/"
   else
     @errors = "Sorry, the credentials do not match"
-    erb:"sessions/new"
+    erb :"sessions/new"
   end
 end
 

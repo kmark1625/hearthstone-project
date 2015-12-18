@@ -19,5 +19,5 @@ end
 
 
 # Create some test users
-User.create(first_name: "Kevin", last_name: "Mark", email: "kmark@gmail.com", password: "hello")
+User.create(first_name: "Kevin", last_name: "Mark", email: "kmark@gmail.com", password: "hello", admin: true)
 
