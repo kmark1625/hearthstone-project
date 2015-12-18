@@ -21,3 +21,16 @@ end
 # Create some test users
 User.create(first_name: "Kevin", last_name: "Mark", email: "kmark@gmail.com", password: "hello", admin: true)
 
+# Create some decks
+control_warrior = Deck.create(name: "Control Warrior", user_id: 1)
+control_warrior.cards << (Card.find_by(name: "Grim Patron"))
+control_warrior.cards << (Card.find_by(name: "Grim Patron"))
+control_warrior.cards << (Card.find_by(name: "Fiery War Axe"))
+handlock = Deck.create(name: "Handlock", user_id: 1)
+handlock.cards << (Card.find_by(name: "Molten Giant"))
+handlock.cards << (Card.find_by(name: "Lord Jaraxxus"))
+dragon_priest = Deck.create(name: "Dragon Priest", user_id: 1)
+dragon_priest.cards << (Card.find_by(name: "Ysera"))
+
+scrape_top_decks()
+
