@@ -1,29 +1,27 @@
 <ul class="nav nav-pills">
-  <li class="active"><a href="/cards">All Cards</a></li>
-  <li><a href="/cards/Basic">Basic</a></li>
-  <li><a href="/cards/Classic">Clasic</a></li>
-  <li><a href="/cards/Naxxramas">Naxxramas</a></li>
-  <li><a href="/cards/Goblins vs Gnomes">Goblins vs Gnomes</a></li>
-  <li><a href="/cards/Blackrock Mountain">Blackrock Mountain</a></li>
-  <li><a href="/cards/The League of Explorers">The Lague of Explorers</a></li>
+  <li class="active"><a href="/cards/sets/all">All Cards</a></li>
+  <li><a href="/cards/sets/Basic">Basic</a></li>
+  <li><a href="/cards/sets/Classic">Clasic</a></li>
+  <li><a href="/cards/sets/Naxxramas">Naxxramas</a></li>
+  <li><a href="/cards/sets/Goblins vs Gnomes">Goblins vs Gnomes</a></li>
+  <li><a href="/cards/sets/Blackrock Mountain">Blackrock Mountain</a></li>
+  <li><a href="/cards/sets/The League of Explorers">The Lague of Explorers</a></li>
 </ul>
 <ul class="gallery">
+  <p>Cards in set: <%= @cards.length %></p>
   <ul class="page-selector">
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
+    <% (@cards.length / 50.0).ceil.times do |index| %>
+      <li><a href="/cards/sets/<%= @set_name %>/<%= index + 1 %>"><%= index+1 %></a></li>
+    <% end %>
   </ul>
-  <% card_grouping = @cards[0..20] %>
+  <% start_index = 0 + 50*(@page_num.to_i - 1) %>
+  <% end_index = start_index + 49 %>
+  <% card_grouping = @cards[start_index..end_index] %>
   <% card_grouping.each do |card| %>
-    <li><img class="card-display" src="<%= card.img %>"></li>
+    <li><a href="/cards/<%= card.id %>"><img class="card-display" src="<%= card.img %>"></a></li>
   <% end %>
-  <ul class="page-selector">
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-  </ul>
+  <br>
+  <% (@cards.length / 50.0).ceil.times do |index| %>
+    <li><a href="/cards/sets/<%= @set_name %>/<%= index + 1 %>"><%= index+1 %></a></li>
+  <% end %>
 </ul>
