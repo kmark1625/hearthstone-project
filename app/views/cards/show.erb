@@ -8,12 +8,12 @@
   <li><a href="/cards/sets/The League of Explorers">The Lague of Explorers</a></li>
 </ul>
 <ul class="gallery">
+  <p>Cards in set: <%= @cards.length %></p>
   <ul class="page-selector">
     <% (@cards.length / 50.0).ceil.times do |index| %>
       <li><a href="/cards/sets/<%= @set_name %>/<%= index + 1 %>"><%= index+1 %></a></li>
     <% end %>
   </ul>
-  <p>Cards in set: <%= @cards.length %></p>
   <% start_index = 0 + 50*(@page_num.to_i - 1) %>
   <% end_index = start_index + 49 %>
   <% card_grouping = @cards[start_index..end_index] %>

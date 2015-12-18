@@ -25,3 +25,14 @@ footer {
   padding: 50px;
   background-color: AliceBlue;
 }
+
+.class-selector {
+  margin: 50px;
+  padding: 50px;
+  background-color: AliceBlue;
+}
+
+.hero {
+  width :220px;
+  height: 300px;
+}
