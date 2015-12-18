@@ -99,6 +99,7 @@ DEPENDENCIES
   factory_girl
   faker
   json
+  nokogiri
   pg
   rack (= 1.5.2)
   rack-test

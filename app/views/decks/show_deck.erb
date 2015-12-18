@@ -1,0 +1,10 @@
+<h1>Deck display</h1>
+<h2><%= @deck.name %></h2>
+<ul>
+  <% @deck.cards.each do |card| %>
+    <li><a href="/cards/<%= card.id%>"><%= card.name %></a></li>
+    <% if current_user && current_user.id == @deck.user.id %>
+    |<a href="#">Delete</a>|
+    <% end %>
+  <% end %>
+</ul>

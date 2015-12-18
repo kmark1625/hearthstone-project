@@ -1,4 +1,4 @@
-class DecksCards < ActiveRecord::Base
+class DecksCard < ActiveRecord::Base
   belongs_to :deck
   belongs_to :card
 end
