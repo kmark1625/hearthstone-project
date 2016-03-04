@@ -3,14 +3,4 @@
   <h3>Card Name: <%= @card.name %></h3>
   <h4>Card Set: <%= @card.cardSet %></h4>
   <img src="<%= @card.img %>">
-  <br>
-  <% if current_user.admin %>
-    <form method="get" action="/cards/<%=@card.id%>/edit">
-      <input type="submit" value="Edit">
-    </form>
-    <form method="post" action="/cards/<%=@card.id%>">
-      <input type="hidden" name="_method" value="delete">
-      <input type="submit" value="Delete">
-    </form>
-  <% end %>
 </div>
